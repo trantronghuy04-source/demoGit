@@ -1,0 +1,257 @@
+/* Thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e9eef3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #4a90e2, #007aff);
+    color: #fff;
+    padding: 40px 20px; /* Thêm padding để có không gian cho logo và tên */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Logo */
+.logo {
+    width: 120px; /* Điều chỉnh kích thước logo */
+    height: 120px; /* Đảm bảo logo có dạng hình tròn */
+    border-radius: 50%; /* Đảm bảo logo có dạng tròn */
+    margin-bottom: 15px; /* Khoảng cách giữa logo và tên */
+    object-fit: cover; /* Đảm bảo logo không bị méo */
+}
+
+/* Nội dung chính */
+main {
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* Phần trang chủ */
+h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card sản phẩm với hiệu ứng 3D */
+.home-content .card {
+    background: linear-gradient(135deg, #ffffff, #f0f0f5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1) inset;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-content .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1) inset;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(135deg, #7cafff, #5f98e3); /* Màu xanh dương nhạt hơn */
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card a:hover {
+    background: linear-gradient(135deg, #5f98e3, #7cafff); /* Màu xanh dương nhạt khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Form tìm kiếm */
+form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+form input[type="text"] {
+    padding: 12px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    transition: box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+form button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #7cafff, #5f98e3); /* Màu xanh dương nhạt cho nút */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #5f98e3, #7cafff); /* Màu xanh dương nhạt khi hover */
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #4a90e2, #007aff);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Form đăng ký */
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Các ô nhập liệu */
+form input {
+    display: block;
+    width: 100%; /* Đảm bảo các ô có chiều rộng bằng nhau */
+    padding: 12px; /* Đảm bảo padding đồng nhất */
+    margin: 10px 0; /* Khoảng cách giữa các ô */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng */
+}
+
+/* Các ô nhập liệu khi focus */
+form input:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.2);
+    outline: none;
+}
+
+/* Nút đăng ký */
+form button {
+    background: linear-gradient(135deg, #007aff, #0056b3);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%; /* Đảm bảo nút có chiều rộng bằng ô nhập liệu */
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #0056b3, #007aff);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Tạo hiệu ứng hover và active cho các ô */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background-color: #7cafff; /* Màu nền xanh dương nhạt */
+}
+
+nav a:hover {
+    background-color: #5f98e3; /* Màu nền khi di chuột vào */
+    transform: scale(1.1); /* Tăng kích thước khi di chuột vào */
+}
+
+nav a:active {
+    background-color: #4687c9; /* Màu nền khi nhấn vào */
+    transform: scale(0.95); /* Tạo hiệu ứng giảm kích thước khi nhấn */
+}
+
+/* Các hiệu ứng khi di chuột vào ô */
+nav {
+    margin-top: 20px;
+    text-align: center; /* Căn giữa */
+}
+
+nav a {
+    padding: 12px 25px; /* Tăng kích thước ô */
+    margin: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Các hiệu ứng khi di chuột vào ô */
+nav a:hover {
+    background-color: #ff8c00; /* Màu nền khi di chuột vào */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+    color: white; /* Màu chữ khi di chuột */
+}
+
+nav a:active {
+    background-color: #e67e22; /* Màu nền khi nhấn */
+    transform: scale(0.98); /* Hiệu ứng nhấn xuống */
+}

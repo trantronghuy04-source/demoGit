@@ -1,0 +1,38 @@
+/* Container cho trang thanh toán */
+.checkout-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.checkout-container h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Thông báo */
+.checkout-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Link quay lại trang chủ */
+.checkout-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.checkout-container a:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,343 @@
+/* Thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e9eef3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #4a90e2, #007aff);
+    color: #fff;
+    padding: 40px 20px; /* Thêm padding để có không gian cho logo và tên */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Logo */
+.logo {
+    width: 120px; /* Điều chỉnh kích thước logo */
+    height: 120px; /* Đảm bảo logo có dạng hình tròn */
+    border-radius: 50%; /* Đảm bảo logo có dạng tròn */
+    margin-bottom: 15px; /* Khoảng cách giữa logo và tên */
+    object-fit: cover; /* Đảm bảo logo không bị méo */
+}
+
+/* Nội dung chính */
+main {
+    padding: 40px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* Bảng quản lý danh mục sản phẩm */
+table {
+    width: 100%; /* Chiều rộng bảng */
+    max-width: 1200px; /* Đồng bộ với header */
+    margin: 20px auto; /* Căn giữa bảng theo chiều ngang */
+    border-collapse: collapse; 
+    background: #ffffff; /* Màu nền bảng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    border-radius: 8px; /* Bo góc bảng */
+    overflow: hidden;
+}
+
+
+/* Container để căn giữa bảng */
+.content-container {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Chiều cao của container bằng toàn bộ chiều cao màn hình */
+}
+
+
+/* Nút trong bảng */
+button, a {
+    padding: 8px 12px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button {
+    background: #e74c3c; /* Màu đỏ cho nút Xóa */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #c0392b; /* Màu đỏ đậm khi hover */
+    transform: scale(1.05);
+}
+
+a {
+    background: #3498db; /* Màu xanh cho nút Update */
+    display: inline-block;
+}
+
+a:hover {
+    background: #2980b9; /* Màu xanh đậm khi hover */
+    transform: scale(1.05);
+}
+
+/* Phần trang chủ */
+h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card sản phẩm với hiệu ứng 3D */
+.home-content .card {
+    background: linear-gradient(135deg, #ffffff, #f0f0f5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1) inset;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-content .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1) inset;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(135deg, #7cafff, #5f98e3); /* Màu xanh dương nhạt hơn */
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card a:hover {
+    background: linear-gradient(135deg, #5f98e3, #7cafff); /* Màu xanh dương nhạt khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Form tìm kiếm */
+form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+form input[type="text"] {
+    padding: 12px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    transition: box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+form button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #7cafff, #5f98e3); /* Màu xanh dương nhạt cho nút */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+form button:hover {
+    background: linear-gradient(135deg, #5f98e3, #7cafff); /* Màu xanh dương nhạt khi hover */
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #4a90e2, #007aff);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Các ô nhập liệu */
+form input {
+    display: block;
+    width: 100%; /* Đảm bảo các ô có chiều rộng bằng nhau */
+    padding: 12px; /* Đảm bảo padding đồng nhất */
+    margin: 10px 0; /* Khoảng cách giữa các ô */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng */
+}
+
+/* Các ô nhập liệu khi focus */
+form input:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.2);
+    outline: none;
+}
+
+/* Nút đăng ký */
+form button {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Màu gradient xanh lá */
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Tăng kích thước nút */
+    border-radius: 50px; /* Bo tròn mạnh */
+    cursor: pointer;
+    font-size: 18px; /* Kích thước chữ lớn */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%; /* Nút chiếm toàn bộ chiều rộng */
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #2E7D32, #4CAF50); /* Đổi màu khi hover */
+    transform: translateY(-3px); /* Hiệu ứng nổi lên */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Bóng đổ mạnh hơn */
+}
+
+form button:active {
+    transform: translateY(2px); /* Hiệu ứng nhấn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Tạo hiệu ứng hover và active cho các ô */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background-color: #7cafff; /* Màu nền xanh dương nhạt */
+}
+
+nav a:hover {
+    background-color: #5f98e3; /* Màu nền khi di chuột vào */
+    transform: scale(1.1); /* Tăng kích thước khi di chuột vào */
+}
+
+nav a:active {
+    background-color: #4687c9; /* Màu nền khi nhấn vào */
+    transform: scale(0.95); /* Tạo hiệu ứng giảm kích thước khi nhấn */
+}
+
+/* Các hiệu ứng khi di chuột vào ô */
+nav {
+    margin-top: 20px;
+    text-align: center; /* Căn giữa */
+}
+
+nav a {
+    padding: 12px 25px; /* Tăng kích thước ô */
+    margin: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Các hiệu ứng khi di chuột vào ô */
+nav a:hover {
+    background-color: #ff8c00; /* Màu nền khi di chuột vào */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+    color: white; /* Màu chữ khi di chuột */
+}
+
+nav a:active {
+    background-color: #e67e22; /* Màu nền khi nhấn */
+    transform: scale(0.98); /* Hiệu ứng nhấn xuống */
+}
+/* Container Form Thêm Mới */
+.form-container {
+    max-width: 100%; /* Chiều rộng chiếm toàn màn hình */
+    margin: 0 auto; /* Căn giữa */
+    padding: 20px; /* Khoảng cách bên trong */
+    background: #ffffff; /* Màu nền trắng */
+    border-radius: 8px; /* Bo góc nhẹ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng mờ */
+}
+form {
+    width: 100%; /* Form chiếm toàn bộ chiều rộng container */
+    max-width: 900px; /* Đặt chiều rộng tối đa phù hợp */
+    margin: 0 auto; /* Căn giữa form */
+    padding: 20px; /* Khoảng cách bên trong form */
+    background: #f9f9f9; /* Màu nền nhẹ cho form */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+form input, form select, form textarea {
+    width: 100%; /* Chiều rộng đầy đủ */
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Viền mờ */
+    border-radius: 4px; /* Bo góc nhẹ */
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng lõm nhẹ */
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border-color: #4CAF50; /* Màu xanh lá khi chọn */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}

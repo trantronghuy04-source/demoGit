@@ -1,0 +1,50 @@
+/* Bảng giỏ hàng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Nút thanh toán */
+.checkout-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+/* Hình ảnh sản phẩm trong giỏ hàng */
+table img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
